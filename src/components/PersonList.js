@@ -7,7 +7,6 @@ export default class PersonList extends React.Component {
   }
 
   componentDidMount() {
-    //lpg: test commentxx
     axios.get(`https://igqma0tvx3.execute-api.us-west-2.amazonaws.com/prod/get-person`)
       .then(res => {
         const persons = res.data.body;
