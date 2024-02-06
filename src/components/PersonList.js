@@ -17,7 +17,7 @@ export default class PersonList extends React.Component {
   render() {
     return (
       <ul>
-        hello
+        hello testing
         
         
       </ul>
