@@ -18,4 +18,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
+      - printf '[{"name":"g5-capstone2-container","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
       
+  artifacts:
+    files: imagedefinitions.json
