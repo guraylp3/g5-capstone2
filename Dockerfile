@@ -19,6 +19,6 @@ COPY . ./
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
 
-# lpg - test 2
+# mcym - test 3
 # start app
 CMD ["npm", "start"]
