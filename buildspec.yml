@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - REPOSITORY_URI=962804699607.dkr.ecr.us-west-2.amazonaws.com/g5-capstone2-ecr
+      - REPOSITORY_URI=962804699607.dkr.ecr.us-west-2.amazonaws.com/g5-capstone2-ecr-tf
       - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin $REPOSITORY_URI
       
   build:
