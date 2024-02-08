@@ -16,7 +16,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo Pushing the Docker images...
+      - echo Pushing the Docker images....
       - docker push $REPOSITORY_URI:latest
       - printf '[{"name":"g5-taskdef-capstone2-tf","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
 artifacts:
