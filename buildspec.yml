@@ -3,8 +3,8 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Fetch API ID from AWS 
-      - export REACT_APP_API_ID=$(aws apigateway get-rest-apis --query 'items[?name==`g5-capstone2-api-tf`].[id]' --output text)
+      - echo Fetch API ID from AWS
+      - echo "REACT_APP_API_ID=$(aws apigateway get-rest-apis --query 'items[?name==`g5-capstone2-api-tf`].[id]' --output text)" > .env
       - echo Logging in to Amazon ECR...
       - REPOSITORY_URI=962804699607.dkr.ecr.us-west-2.amazonaws.com/g5-capstone2-ecr-tf
       - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin $REPOSITORY_URI
