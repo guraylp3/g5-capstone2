@@ -7,6 +7,27 @@
   pointer-events: none;
 }
 
+.image {
+  display: block;
+  grid-area: image;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.name {
+  grid-area: name;
+  align-self: flex-end;
+  font-size: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.initials {
+  font-size: 20px;
+  grid-area: job;
+  text-align: center
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

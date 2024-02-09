@@ -16,14 +16,18 @@ export default class PersonList extends React.Component {
 
   render() {
     return (
-      <ul>
+      <>
         {
           this.state.persons
             .map(person =>
-              <li key={person.id}>{person.id}{person.name}</li>
+              (<div key={person.id} className="card">
+                <img className="image" alt="profile image" src={person.profile_picture} />
+                <div className="name">{person.name}</div>
+                <div className="initials">{person.initials}</div>
+              </div>)
             )
         }
-      </ul>
+      </>
     )
   }
 }
