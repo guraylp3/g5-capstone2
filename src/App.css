@@ -8,7 +8,6 @@
 }
 
 .image {
-  display: block;
   grid-area: image;
   height: 100px;
   width: 100px;
